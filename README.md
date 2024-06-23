@@ -3,7 +3,7 @@
 * 通过图灵官网接口，实现聊天机器人功能  
 
 ## Dev
-数据库 SQL Server：[testdb.sql](docs%2Ftestdb.sql)
+数据库 SQL Server：[testdb.sql](docs%2Ftestdb.sql) （navicat 可以导入导出）
 
 测试学生账号/密码：stu/stu
 
