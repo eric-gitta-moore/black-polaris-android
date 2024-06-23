@@ -13,6 +13,17 @@
 
 启动 mssql：`docker compose up -d`
 
+修改数据库链接，全局搜索 `192.168.16.106` 替换
+
+默认的数据库连接信息
+```yaml
+server: 192.168.16.106
+dbName: testdb
+username: sa
+password: 111.Alibaba.Com!
+url: jdbc:jtds:sqlserver://192.168.16.106:1433/testdb
+```
+
  
 # 这是本人的一个课程设计，小白一个，功能也较为简单，是连接本地数据库通过安卓来实现对数据库进行增删改查等操作，记录一下自己的学习过程。  
 ## 注意点：
