@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Connection con;
     private String drive = "net.sourceforge.jtds.jdbc.Driver";
-    private String connStr = "jdbc:jtds:sqlserver://localhost:1433/task";
+    private String connStr = "jdbc:jtds:sqlserver://192.168.16.106:1433/testdb";
     private PreparedStatement pstm;
     private EditText etId ;
     private EditText etPassword;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private String password = "123456";
 
 
-    private SqlHelper sh = new SqlHelper("localhost", "task", "sa", "123456");
+    private SqlHelper sh = new SqlHelper("192.168.16.106", "testdb", "sa", "111.Alibaba.Com!");
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         public void run() {
                             try {
                                 Class.forName(drive);
-                                con = DriverManager.getConnection(connStr,"sa","123456");
+                                con = DriverManager.getConnection(connStr,"sa","111.Alibaba.Com!");
                                 pstm = con.prepareStatement("select [ID] as id,[Password] as password ,Type  from admin  where ID like ? and Password like ?");
                                 pstm.setString(1,etId.getText().toString());
                                 pstm.setString(2,etPassword.getText().toString());

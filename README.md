@@ -1,6 +1,18 @@
 # 学生成绩管理系统+图灵聊天机器人课程设计（连接SqlServer数据库，图灵聊天机器人）
 * 通过android studio连接SqlServer  
 * 通过图灵官网接口，实现聊天机器人功能  
+
+## Dev
+数据库 SQL Server：[testdb.sql](docs%2Ftestdb.sql)
+
+测试学生账号/密码：stu/stu
+
+测试老师账号/密码：tea/tea
+
+推荐 Docker 部署 mssql：[compose.yml](docs%2Fcompose.yml)
+
+启动 mssql：`docker compose up -d`
+
  
 # 这是本人的一个课程设计，小白一个，功能也较为简单，是连接本地数据库通过安卓来实现对数据库进行增删改查等操作，记录一下自己的学习过程。  
 ## 注意点：

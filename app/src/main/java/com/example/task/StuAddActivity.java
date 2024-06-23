@@ -37,7 +37,7 @@ public class StuAddActivity extends AppCompatActivity {
     private  String stuClass = "";
     private  String stuScore = "";
 
-    private SqlHelper sh = new SqlHelper("localhost", "task", "sa", "123456");
+    private SqlHelper sh = new SqlHelper("192.168.16.106", "testdb", "sa", "111.Alibaba.Com!");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +93,7 @@ public class StuAddActivity extends AppCompatActivity {
                         String jsonResult = msg.obj.toString();
                         System.out.println(jsonResult + "/////");
                         List<Course> courses = new Gson().fromJson(jsonResult,new TypeToken<List<Course>>(){}.getType());
+                        String cID = courses.get(0).CID;
                         String cName = courses.get(0).CName;
                         System.out.println(cName+ "*****");
 
@@ -113,7 +114,7 @@ public class StuAddActivity extends AppCompatActivity {
                         params2.add(stuGrade);
                         params2.add(stuClass);
                         params2.add(stuId);
-                        params2.add(cName);
+                        params2.add(cID);
                         params2.add(stuScore);
                         String sql2 = "begin Transaction t1\n" +
                                 "insert Student (StudentID,Name,Gender,Grade,Class)\n" +

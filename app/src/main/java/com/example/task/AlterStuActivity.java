@@ -40,7 +40,7 @@ public class AlterStuActivity extends AppCompatActivity {
     private  String alterstuScore = "";
     Map<String ,Object> map;
 
-    private SqlHelper sh = new SqlHelper("localhost", "task", "sa", "123456");
+    private SqlHelper sh = new SqlHelper("192.168.16.106", "testdb", "sa", "111.Alibaba.Com!");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
